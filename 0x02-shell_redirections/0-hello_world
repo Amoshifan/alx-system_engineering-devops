@@ -1,1 +1,2 @@
-#!/bin/bash echo 0-hello_world
+#!/bin/bash 
+echo 0-hello_world
