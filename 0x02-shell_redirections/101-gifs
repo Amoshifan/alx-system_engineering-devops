@@ -1,2 +1,2 @@
 #!/bin/bash
-nd -type f -name "*.gif" | rev | cut -d "/" -f 1 |cut -d 2- | rev | LC_ALL=c sort -f
+nd -type f -name "*.gif" | rev | cut -d "/" -f 1 |cut -d 2- | rev | LC_ALL=c so	rt -f
