@@ -1,8 +1,8 @@
 #!/usr/bin/evn bash
 # using puppet to make changes to our configuration file
 
-file { 'ect/ssh/ssh_cofig':
-	ensur => present,
+file { 'ect/ssh/ssh_config':
+	ensure => present,
 
 content =>"
 
