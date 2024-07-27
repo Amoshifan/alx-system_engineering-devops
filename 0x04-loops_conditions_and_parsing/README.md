@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-<title>Loops, Conditions and Parsing<title>
+Loops, conditions and parsing
 </head>
 <body>
 <h3>At the end of this project you are expected to be able to explain to anyone, without the help of Google:
