@@ -1,0 +1,37 @@
+Designing a Simple Web Infrastructure on a Single Server
+In this scenario, we are tasked with designing a simple web infrastructure using one server to host a website reachable via www.foobar.com. This infrastructure will include a web server (Nginx), an application server, application files, a MySQL database, and a domain name configured to point to the server's IP address.
+
+1. The Server
+What is a Server?
+A server is a powerful computer that provides services, data, or applications to other computers (clients) over a network. In this case, our server will host the entire website, handle user requests, process data, and serve the necessary web pages to the users.
+2. The Domain Name and DNS Record
+Domain Name:
+
+foobar.com is the human-readable address of our website. Domain names are used because they are easier to remember than IP addresses.
+DNS Record:
+
+The www in www.foobar.com is a CNAME (Canonical Name) record that points to the IP address 8.8.8.8 of our server. When a user types www.foobar.com into their browser, the DNS system translates this domain name into the server’s IP address, allowing the browser to connect to the server.
+3. The Web Server (Nginx)
+Role of the Web Server:
+Nginx acts as the web server, handling HTTP requests from users. When a user visits www.foobar.com, Nginx listens for these requests, processes them, and serves the appropriate content (e.g., HTML pages, CSS, JavaScript) to the user's browser. Nginx also manages static content (like images) and can proxy requests to the application server.
+4. The Application Server
+Role of the Application Server:
+The application server runs the backend logic of the website, processing dynamic content, executing code, and handling user interactions. It communicates with the web server to deliver dynamic pages based on user input. For instance, when a user submits a form, the application server processes the data and updates the database if necessary.
+5. The Database (MySQL)
+Role of the Database:
+The MySQL database stores all the data required by the application, such as user information, content, and other dynamic data. The application server interacts with the database to retrieve or update data as needed to generate the content for the users.
+6. Communication Between Server and User's Computer
+Communication Protocol:
+The server communicates with the user’s computer (client) over the HTTP or HTTPS protocol. When a user requests a page, their browser sends an HTTP/HTTPS request to the server, and the server responds with the appropriate content.
+Issues with this Infrastructure
+Single Point of Failure (SPOF):
+
+Since everything is hosted on a single server, if the server goes down, the entire website will be unavailable. This is a critical risk because any hardware failure, software bug, or attack can take down the entire service.
+Downtime During Maintenance:
+
+Deploying new code or making configuration changes often requires restarting the web server or other services. Since there’s only one server, this means the website will be inaccessible during maintenance, leading to potential downtime.
+Scalability Issues:
+
+The single server setup limits the ability to handle large amounts of traffic. If too many users try to access the website simultaneously, the server may become overloaded, leading to slow performance or outages. Without the ability to scale horizontally (adding more servers), this infrastructure can only handle a limited number of concurrent users.
+Conclusion
+This simple web infrastructure is adequate for small-scale applications or personal projects. However, for larger applications or those requiring high availability, more sophisticated setups with multiple servers, load balancing, and redundancy would be necessary to avoid the issues of SPOF, maintenance downtime, and scalability constraints.
