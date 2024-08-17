@@ -24,7 +24,7 @@ The memory leak was caused by improper session termination in the payment proces
 3. **Code Review:** Conduct a thorough review of critical modules to identify and fix potential issues.
 
 ## License
-This report is licensed under the MIT License - see the [LICENSE](https://docs.google.com/document/d/12HRHMhd8tEj8tTVP60C1cBdPAXatUyQ214gn75UX5XI/edit?usp=sharing ) file for details.
+This report is licensed under the MIT License - see the [LICENSE](https://docs.google.com/document/d/1sDn_jBmbTfgTWAyTC216JrZkZAHXWARbpQvWzJFlDto/edit?usp=sharing ) file for details.
 
 ## Contributing
 Contributions to improving postmortem processes or related tooling are welcome. Please open an issue or submit a pull request with your suggestions.
